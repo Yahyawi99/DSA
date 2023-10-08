@@ -28,6 +28,4 @@ function maxChar(str) {
   return maxChar;
 }
 
-maxChar("abcccccccd");
-
 module.exports = maxChar;
