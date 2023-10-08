@@ -18,7 +18,7 @@ function maxChar(str) {
   let maxVal = 0;
   let maxChar = "";
 
-  for (char of str) {
+  for (char in strObject) {
     if (strObject[char] > maxVal) {
       maxVal = strObject[char];
       maxChar = char;
