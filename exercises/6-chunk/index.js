@@ -13,14 +13,13 @@ function chunk(array, size) {
 
   for (let index in array) {
     const chunk = array.slice(index * size, size + size * index);
-
     if (chunk.length) {
       chunksParent.push(chunk);
     }
   }
   return chunksParent;
 }
-chunk([1, 2, 3, 4, 5, 6, 7, 8], 3);
+
 module.exports = chunk;
 
 // ************************************
