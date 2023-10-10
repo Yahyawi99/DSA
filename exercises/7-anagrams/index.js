@@ -8,6 +8,25 @@
 //   anagrams('RAIL! SAFETY!', 'fairy tales') --> True
 //   anagrams('Hi there', 'Bye there') --> False
 
+function cleanString(string) {
+  const regex = /[^\w]/g;
+  return string.replace(regex, "").toLowerCase().split("").sort().join("");
+}
+
+function anagrams(stringA, stringB) {
+  const cleanStringA = cleanString(stringA);
+  const cleanStringB = cleanString(stringB);
+
+  return cleanStringA === cleanStringB;
+}
+
+anagrams("rail safety", "fairy tales");
+
+module.exports = anagrams;
+
+/******************************/
+/* 
+
 function createStringObject(string) {
   const regex = /[^\w]/g;
 
@@ -41,4 +60,5 @@ function anagrams(stringA, stringB) {
   return true;
 }
 
-module.exports = anagrams;
+
+*/
