@@ -8,13 +8,11 @@
 //   capitalize('look, it is working!') --> 'Look, It Is Working!'
 
 function capitalize(str) {
-  const strArr = str.split(" ").map((word) => {
+  const words = str.split(" ").map((word) => {
     return word.replace(word[0], word[0].toUpperCase());
   });
 
-  return strArr.join(" ");
+  return words.join(" ");
 }
-
-capitalize("i love breakfast at bill miller bbq");
 
 module.exports = capitalize;
