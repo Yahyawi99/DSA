@@ -17,6 +17,26 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
+const hashTags = (hash, space) => {
+  let result = "";
+
+  while (hash > 0) {
+    result += "#";
+    hash--;
+  }
+
+  while (space > 0) {
+    result += " ";
+    space--;
+  }
+
+  return result;
+};
+
+function steps(n) {
+  for (let i = 1, j = n - 1; i <= n; i++, j--) {
+    console.log(hashTags(i, j));
+  }
+}
 
 module.exports = steps;
