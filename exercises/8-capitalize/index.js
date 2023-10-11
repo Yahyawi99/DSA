@@ -12,13 +12,7 @@ function capitalize(str) {
     return word.replace(word[0], word[0].toUpperCase());
   });
 
-  //   const newStr = [];
-  //   for (let char of strArr) {
-  //     char = char.replace(char[0], char[0].toUpperCase());
-  //     console.log(strArr);
-  //   }
-
-  console.log(strArr);
+  return strArr.join(" ");
 }
 
 capitalize("i love breakfast at bill miller bbq");
