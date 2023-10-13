@@ -17,15 +17,25 @@
 //       '### '
 //       '####'
 
-function steps(n, step = 1) {
-  if (step === n) {
+function steps(n, row = 0, stair = "") {
+  if (row === n) {
     return;
   }
 
-  steps(n - 1);
-}
+  if (n === stair.length) {
+    console.log(stair);
+    steps(n, row + 1);
+    return;
+  }
 
-steps(10);
+  if (stair.length <= row) {
+    stair += "#";
+  } else {
+    stair += " ";
+  }
+
+  steps(n, row, stair);
+}
 
 module.exports = steps;
 
