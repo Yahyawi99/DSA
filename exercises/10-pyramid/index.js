@@ -14,11 +14,34 @@
 //       ' ### '
 //       '#####'
 
-function pyramid(n) {
-  //   if (n === row) {
-  //     return;
-  //   }
+function pyramid(n, row = 0, level = "") {
+  if (n === row) {
+    return;
+  }
+
+  if (2 * n - 1 === level.length) {
+    console.log(level);
+    pyramid(n, row + 1);
+    return;
+  }
+
   const midpiont = Math.floor((2 * n - 1) / 2);
+
+  if (midpiont - row <= level.length && midpiont + row >= level.length) {
+    level += "#";
+  } else {
+    level += " ";
+  }
+
+  pyramid(n, row, level);
+}
+
+pyramid(5);
+
+module.exports = pyramid;
+
+/*
+ const midpiont = Math.floor((2 * n - 1) / 2);
 
   for (let row = 0; row < n; row++) {
     let level = "";
@@ -31,8 +54,4 @@ function pyramid(n) {
     }
     console.log(level);
   }
-}
-
-pyramid(5);
-
-module.exports = pyramid;
+*/
