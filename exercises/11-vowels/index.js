@@ -13,10 +13,6 @@ function vowels(str) {
   return str.match(regx) ? str.match(regx).length : 0;
 }
 
-console.log(vowels("Hi There!"));
-console.log(vowels("Why do you ask?"));
-console.log(vowels("Why?"));
-
 module.exports = vowels;
 
 /*
